@@ -15,6 +15,8 @@
 		3ADB1C532A5362F800403C17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ADB1C522A5362F800403C17 /* GoogleService-Info.plist */; };
 		3ADB1C572A5363B900403C17 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3ADB1C562A5363B900403C17 /* FirebaseFirestore */; };
 		3ADB1C5B2A53657500403C17 /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C5A2A53657500403C17 /* Fitness.swift */; };
+		3ADB1C5D2A536A7A00403C17 /* FitnessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C5C2A536A7A00403C17 /* FitnessDetailViewController.swift */; };
+		3ADB1C5F2A536C0600403C17 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C5E2A536C0600403C17 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		3ADB1C4C2A53629C00403C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ADB1C522A5362F800403C17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3ADB1C5A2A53657500403C17 /* Fitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
+		3ADB1C5C2A536A7A00403C17 /* FitnessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDetailViewController.swift; sourceTree = "<group>"; };
+		3ADB1C5E2A536C0600403C17 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3ADB1C442A53629B00403C17 /* Main.storyboard */,
+				3ADB1C5C2A536A7A00403C17 /* FitnessDetailViewController.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3ADB1C5A2A53657500403C17 /* Fitness.swift */,
+				3ADB1C5E2A536C0600403C17 /* ViewModel.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -174,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADB1C5F2A536C0600403C17 /* ViewModel.swift in Sources */,
 				3ADB1C5B2A53657500403C17 /* Fitness.swift in Sources */,
 				3ADB1C3F2A53629B00403C17 /* AppDelegate.swift in Sources */,
+				3ADB1C5D2A536A7A00403C17 /* FitnessDetailViewController.swift in Sources */,
 				3ADB1C412A53629B00403C17 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
