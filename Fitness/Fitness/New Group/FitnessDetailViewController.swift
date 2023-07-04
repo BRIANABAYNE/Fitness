@@ -8,8 +8,8 @@
 import UIKit
 
 class FitnessDetailViewController: UIViewController {
-
-   
+    
+    
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UITextField!
@@ -21,20 +21,18 @@ class FitnessDetailViewController: UIViewController {
     @IBOutlet weak var addButtonTap: UIButton!
     @IBOutlet weak var nutritionLabel: UITextField!
     
-
+    
     // MARK: - Property
     var viewModel: FitnessDetailViewModel!
-   
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         viewModel = FitnessDetailViewModel()
-            }
+    }
     
-// MARK: - Actions
-
+    // MARK: - Actions
+    
     @IBAction func addButtonTapped(_ sender: Any) {
         
         guard let name = nameLabel.text,
@@ -44,7 +42,7 @@ class FitnessDetailViewController: UIViewController {
               let personalRecord = personRecrodLabel.text,
               let goal = goalLabel.text,
               let score = scoreLabel.text else { return }
-                
+        
         let PRasDouble = Double(personalRecord) ?? 0
         let scoreAsDouble = Double(score) ?? 0
         let goalAsInt = Int(goal) ?? 0
