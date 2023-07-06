@@ -17,7 +17,7 @@ class FitnessListTableViewController: UITableViewController {
 // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = FitnessListViewModel(injectedDelegate: FitnessListViewModelDelegate)
+        viewModel = FitnessListViewModel(injectedDelegate: self)
 //        viewModel.fetchAllAthletes()
 //        viewModel.delegate = self // Hiring the delegate to do the job duties we need.
 //
@@ -25,7 +25,9 @@ class FitnessListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
- 
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.fetchAllAthletes()
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -34,11 +36,25 @@ class FitnessListTableViewController: UITableViewController {
  
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fitnessCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fitnessCell", for: indexPath) as! FitnessListTableViewCell
         let fitness = viewModel.fitnessSourceOfTruth?[indexPath.row]
         cell.configure(with: fitness)
 
         return cell
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // IIDOO - identifer, indexpath, destination
+        guard let destination = segue.destination as? FitnessDetailViewController else { return }
+        if segue.identifier == "toDetailVC" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let fitnessApp = viewModel.fitnessSourceOfTruth?[indexPath.row]
+            destination.viewModel = FitnessDetailViewModel(fitness: fitnessApp, injectedDelegate: destination)
+        } else {
+            destination.viewModel = FitnessDetailViewModel(fitness: nil, injectedDelegate: destination)
+        }
     }
 
  

@@ -10,8 +10,8 @@ import FirebaseFirestore
 
 
 // creating the job posting and that is the first step when setting a protocal and delegate
-protocol FitnessListViewModelDelegate: FitnessListTableViewCell {
-    
+protocol FitnessListViewModelDelegate: FitnessListTableViewController {
+    func successfullyLoadedData() 
 }
 
 class FitnessListViewModel {
@@ -33,7 +33,7 @@ class FitnessListViewModel {
     
     func fetchAllAthletes() {
         let db = Firestore.firestore()
-        db.collection("Fitness").getDocuments { snapshot, error in
+        db.collection(Constants.Fitness.fitnessCollectionPath).getDocuments { snapshot, error in
             guard let documents = snapshot?.documents else {return}
             do {
                 let fitnessArray = try documents.compactMap({try $0.data(as: Fitness.self)})

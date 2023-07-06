@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Afj-0J-LvG">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -59,6 +59,7 @@
                                     <outlet property="fitnessNameLabel" destination="5MV-fd-r5M" id="QVm-oi-cEz"/>
                                     <outlet property="fitnessNutritionLabel" destination="Vuq-XY-yEP" id="hnf-tD-vva"/>
                                     <outlet property="fitnessSizeLabel" destination="qez-OV-9PL" id="siY-zO-opI"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="1ym-rp-7PB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,20 +68,27 @@
                             <outlet property="delegate" destination="0oP-q5-JLY" id="P2t-YJ-svj"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="5xN-T8-szJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dQT-UT-19h">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="toDetailVC" id="DkD-oG-mSR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9it-je-l0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="-13"/>
+            <point key="canvasLocation" x="591.60305343511448" y="-13.380281690140846"/>
         </scene>
         <!--Fitness Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FitnessDetailViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="56O-qB-xxV">
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" axis="vertical" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="56O-qB-xxV">
                                 <rect key="frame" x="40" y="100" width="313" height="530"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nutriton " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-0X-9lc">
@@ -131,20 +139,29 @@
                                     <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0r5-cd-FIf"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="OLY" translatesAutoresizingMaskIntoConstraints="NO" id="mNx-zh-ckz">
+                                <rect key="frame" x="50" y="684.33333333333337" width="293" height="159.66666666666663"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="56O-qB-xxV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="9Xx-Z4-Isj"/>
+                            <constraint firstItem="mNx-zh-ckz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="LyD-xq-idP"/>
+                            <constraint firstItem="mNx-zh-ckz" firstAttribute="top" secondItem="EAC-Oh-R8z" secondAttribute="bottom" constant="10" id="bqg-VZ-dZc"/>
                             <constraint firstItem="EAC-Oh-R8z" firstAttribute="top" secondItem="56O-qB-xxV" secondAttribute="bottom" constant="10" id="dLK-WX-Zfm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EAC-Oh-R8z" secondAttribute="trailing" constant="100" id="f38-hS-9UZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mNx-zh-ckz" secondAttribute="trailing" constant="50" id="gQR-5I-FlY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="56O-qB-xxV" secondAttribute="trailing" constant="40" id="iMp-1R-0uC"/>
                             <constraint firstItem="56O-qB-xxV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="mlx-O2-Ueh"/>
                             <constraint firstItem="EAC-Oh-R8z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="xOX-wH-cKL"/>
+                            <constraint firstItem="mNx-zh-ckz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="2" id="xfh-g4-L6a"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XqV-5e-Ama"/>
                     <connections>
                         <outlet property="coachNameLabel" destination="QQk-Z7-VBJ" id="kUh-c7-9a9"/>
+                        <outlet property="fitnessDisplayImageView" destination="mNx-zh-ckz" id="WUE-SQ-F6A"/>
                         <outlet property="goalLabel" destination="Pd6-Uy-IcA" id="D0N-MD-cmK"/>
                         <outlet property="movementLabel" destination="EyY-VC-73d" id="Twx-DI-LUa"/>
                         <outlet property="nameLabel" destination="i0i-KE-UDU" id="0ye-0j-eqy"/>
@@ -155,10 +172,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="-75"/>
+            <point key="canvasLocation" x="1666" y="-13"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="weM-Ra-HoP">
+            <objects>
+                <viewController id="oY3-fi-UbI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eac-Nq-uhx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9Fz-ID-lUv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPh-II-5r7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1189" y="-18"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NXw-Sw-w1V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Afj-0J-LvG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAM-n4-51l">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OiO-sT-bZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335.1145038167939" y="-13.380281690140846"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DkD-oG-mSR"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="OLY" width="3024" height="4032"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
