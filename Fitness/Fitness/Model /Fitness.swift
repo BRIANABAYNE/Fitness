@@ -18,7 +18,7 @@ struct Fitness: Codable {
     let score: Double
     let goal: Int
     let colllectionType: String = "Fitness"
-    let size : Size
+   // let size : Size?
     
 }
 

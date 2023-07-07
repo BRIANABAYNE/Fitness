@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oY3-fi-UbI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Opener View Controller-->
+        <scene sceneID="weM-Ra-HoP">
+            <objects>
+                <viewController storyboardIdentifier="Opener" id="oY3-fi-UbI" customClass="OpenerViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eac-Nq-uhx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fitness " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuT-sz-VZe">
+                                <rect key="frame" x="163" y="103" width="214" height="35.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OLY" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-0c-AH3">
+                                <rect key="frame" x="76.666666666666686" y="124.66666666666669" width="240" height="628"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Fz-ID-lUv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Cr-0c-AH3" firstAttribute="width" secondItem="eac-Nq-uhx" secondAttribute="width" multiplier="0.610687" id="56x-2L-PM5"/>
+                            <constraint firstItem="5Cr-0c-AH3" firstAttribute="top" secondItem="xuT-sz-VZe" secondAttribute="bottom" constant="4" id="IA0-6u-wCH"/>
+                            <constraint firstItem="9Fz-ID-lUv" firstAttribute="trailing" secondItem="xuT-sz-VZe" secondAttribute="trailing" constant="10" id="M0Y-ro-7tD"/>
+                            <constraint firstItem="xuT-sz-VZe" firstAttribute="leading" secondItem="9Fz-ID-lUv" secondAttribute="leading" constant="175" id="O4N-Xy-1yP"/>
+                            <constraint firstItem="5Cr-0c-AH3" firstAttribute="centerY" secondItem="9Fz-ID-lUv" secondAttribute="centerY" id="cpQ-on-wuf"/>
+                            <constraint firstItem="5Cr-0c-AH3" firstAttribute="centerX" secondItem="9Fz-ID-lUv" secondAttribute="centerX" id="g8J-N5-x7H"/>
+                            <constraint firstItem="xuT-sz-VZe" firstAttribute="top" secondItem="9Fz-ID-lUv" secondAttribute="top" constant="4" id="wLU-EU-qS4"/>
+                            <constraint firstItem="5Cr-0c-AH3" firstAttribute="height" secondItem="eac-Nq-uhx" secondAttribute="height" multiplier="0.150235" constant="500" id="zXl-tT-bxK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kgG-XB-cl5"/>
+                    <connections>
+                        <outlet property="fitnessOpenerImage" destination="5Cr-0c-AH3" id="H1x-TE-otd"/>
+                        <outlet property="fitnessOpenerLabel" destination="xuT-sz-VZe" id="wSG-np-2df"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPh-II-5r7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.29007633587787" y="-23.239436619718312"/>
+        </scene>
+        <!--FitnessList-->
+        <scene sceneID="iQd-pf-QsS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FitnessList" id="Vrm-2j-Iar" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="p8k-Wy-eAt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTA-2M-ylN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376" y="-23"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OLY" width="3024" height="4032"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

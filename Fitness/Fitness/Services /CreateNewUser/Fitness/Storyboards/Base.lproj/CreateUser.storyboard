@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8uT-gE-EHI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Account View Controller-->
+        <scene sceneID="Ylk-DR-jcy">
+            <objects>
+                <viewController storyboardIdentifier="CreateUser" id="8uT-gE-EHI" customClass="CreateAccountViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OzV-bK-wzR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-PE-IyQ">
+                                <rect key="frame" x="20" y="159" width="353" height="160"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIV-32-O4q">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VU7-9q-Z2E">
+                                        <rect key="frame" x="0.0" y="63" width="353" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9o8-iK-Izi">
+                                        <rect key="frame" x="0.0" y="126" width="353" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6v-sw-pXf">
+                                <rect key="frame" x="120.66666666666667" y="575" width="142.33333333333331" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mec-4G-Ont"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Account"/>
+                                <connections>
+                                    <action selector="createButtonTapped:" destination="8uT-gE-EHI" eventType="touchUpInside" id="4CS-cI-cfi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa4-Ql-QAt">
+                                <rect key="frame" x="153" y="673" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZFg-Oh-Fyz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In "/>
+                                <connections>
+                                    <action selector="singInButtonTapped:" destination="8uT-gE-EHI" eventType="touchUpInside" id="ajG-hV-lTo"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="OLY 1" translatesAutoresizingMaskIntoConstraints="NO" id="0NR-mQ-GYa">
+                                <rect key="frame" x="27" y="348" width="339" height="217"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Wi-d7-dzG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a2y-PE-IyQ" firstAttribute="top" secondItem="5Wi-d7-dzG" secondAttribute="top" constant="100" id="12w-gL-xN5"/>
+                            <constraint firstItem="qa4-Ql-QAt" firstAttribute="top" secondItem="k6v-sw-pXf" secondAttribute="bottom" constant="54" id="2bV-4K-ZT6"/>
+                            <constraint firstItem="5Wi-d7-dzG" firstAttribute="trailing" secondItem="k6v-sw-pXf" secondAttribute="trailing" constant="130" id="3vv-fp-DyV"/>
+                            <constraint firstItem="5Wi-d7-dzG" firstAttribute="trailing" secondItem="a2y-PE-IyQ" secondAttribute="trailing" constant="20" id="6Ls-5Z-fhl"/>
+                            <constraint firstItem="k6v-sw-pXf" firstAttribute="top" secondItem="0NR-mQ-GYa" secondAttribute="bottom" constant="10" id="CoY-ZF-DNr"/>
+                            <constraint firstItem="0NR-mQ-GYa" firstAttribute="top" secondItem="a2y-PE-IyQ" secondAttribute="bottom" constant="29" id="QxD-Xo-4lc"/>
+                            <constraint firstItem="0NR-mQ-GYa" firstAttribute="leading" secondItem="5Wi-d7-dzG" secondAttribute="leading" constant="27" id="VHh-bq-jrX"/>
+                            <constraint firstItem="5Wi-d7-dzG" firstAttribute="trailing" secondItem="0NR-mQ-GYa" secondAttribute="trailing" constant="27" id="c9P-gr-6hr"/>
+                            <constraint firstItem="a2y-PE-IyQ" firstAttribute="leading" secondItem="5Wi-d7-dzG" secondAttribute="leading" constant="20" id="gEb-jE-dS9"/>
+                            <constraint firstItem="5Wi-d7-dzG" firstAttribute="bottom" secondItem="qa4-Ql-QAt" secondAttribute="bottom" constant="101" id="jLe-I2-qEH"/>
+                            <constraint firstItem="5Wi-d7-dzG" firstAttribute="trailing" secondItem="qa4-Ql-QAt" secondAttribute="trailing" constant="160" id="pjD-fv-pdV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="GIV-32-O4q" id="GXe-De-lOM"/>
+                        <outlet property="confirmPassword" destination="9o8-iK-Izi" id="6HR-Wj-qdx"/>
+                        <outlet property="olyPictureImageView" destination="0NR-mQ-GYa" id="aTA-sf-4Gw"/>
+                        <outlet property="passwordLabel" destination="VU7-9q-Z2E" id="MjH-zh-toa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCs-ZW-7eA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.28244274809163" y="-750"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="OLY 1" width="5265" height="3499"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

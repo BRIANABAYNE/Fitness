@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0oP-q5-JLY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fitness List Table View Controller-->
+        <scene sceneID="UCN-oR-AYY">
+            <objects>
+                <tableViewController id="0oP-q5-JLY" customClass="FitnessListTableViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="L7S-iD-bSN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fitnessCell" rowHeight="150" id="UIC-tm-Jhy" customClass="FitnessListTableViewCell" customModule="Fitness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UIC-tm-Jhy" id="kqd-FU-jvS">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MV-fd-r5M">
+                                            <rect key="frame" x="120" y="41" width="45" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="QZm-ZZ-Eav">
+                                            <rect key="frame" x="265" y="31" width="88" height="68"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nutrition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuq-XY-yEP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="22.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Coach Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKd-LC-bt2">
+                                                    <rect key="frame" x="0.0" y="47.666666666666671" width="88" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QZm-ZZ-Eav" secondAttribute="bottom" constant="40" id="9GA-YY-juW"/>
+                                        <constraint firstItem="5MV-fd-r5M" firstAttribute="top" secondItem="kqd-FU-jvS" secondAttribute="topMargin" constant="30" id="IDG-hJ-uUB"/>
+                                        <constraint firstItem="QZm-ZZ-Eav" firstAttribute="leading" secondItem="5MV-fd-r5M" secondAttribute="trailing" constant="100" id="PkK-Al-fq1"/>
+                                        <constraint firstItem="5MV-fd-r5M" firstAttribute="leading" secondItem="kqd-FU-jvS" secondAttribute="leadingMargin" constant="100" id="ZRO-J8-W2Q"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QZm-ZZ-Eav" secondAttribute="trailing" constant="20" id="jHn-fj-MNA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5MV-fd-r5M" secondAttribute="bottom" constant="84" id="lID-xA-drD"/>
+                                        <constraint firstItem="QZm-ZZ-Eav" firstAttribute="top" secondItem="kqd-FU-jvS" secondAttribute="topMargin" constant="20" id="qgI-z6-efn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coachNameLabel" destination="fKd-LC-bt2" id="8YF-v6-QJE"/>
+                                    <outlet property="fitnessNameLabel" destination="5MV-fd-r5M" id="QVm-oi-cEz"/>
+                                    <outlet property="fitnessNutritionLabel" destination="Vuq-XY-yEP" id="hnf-tD-vva"/>
+                                    <segue destination="wdA-o6-FFL" kind="show" id="1ym-rp-7PB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0oP-q5-JLY" id="JZr-TN-OeB"/>
+                            <outlet property="delegate" destination="0oP-q5-JLY" id="P2t-YJ-svj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5xN-T8-szJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dQT-UT-19h">
+                            <connections>
+                                <segue destination="wdA-o6-FFL" kind="show" identifier="toDetailVC" id="DkD-oG-mSR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9it-je-l0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376" y="-23"/>
+        </scene>
+        <!--FitnessDetail-->
+        <scene sceneID="3CX-3s-X1f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FitnessDetail" id="wdA-o6-FFL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Xxh-oM-scz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsZ-bW-um7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309" y="-23"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DkD-oG-mSR"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
