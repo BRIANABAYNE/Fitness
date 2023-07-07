@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             if Auth.auth().currentUser != nil {
                 // user has signed in, or created an account
-                let storyboard = UIStoryboard(name: "Opener", bundle: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let navigation = storyboard.instantiateViewController(withIdentifier:"Navigation")
                 self.window?.rootViewController = navigation
             } else {

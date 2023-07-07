@@ -13,11 +13,9 @@ class FitnessDetailViewController: UIViewController, UINavigationControllerDeleg
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UITextField!
-    @IBOutlet weak var coachNameLabel: UITextField!
     @IBOutlet weak var movementLabel: UITextField!
     @IBOutlet weak var personRecrodLabel: UITextField!
     @IBOutlet weak var goalLabel: UITextField!
-    @IBOutlet weak var scoreLabel: UITextField!
     @IBOutlet weak var addButtonTap: UIButton!
     @IBOutlet weak var nutritionLabel: UITextField!
     @IBOutlet weak var fitnessDisplayImageView: UIImageView!
@@ -39,7 +37,6 @@ class FitnessDetailViewController: UIViewController, UINavigationControllerDeleg
     private func configureView() {
         guard let fitness = viewModel?.fitness else { return }
         nameLabel.text = fitness.name
-        coachNameLabel.text = fitness.coachName
         movementLabel.text = fitness.movement
         personRecrodLabel.text = "\(fitness.PR)" // string interp
         goalLabel.text = "\(fitness.goal)" // string interp
@@ -73,26 +70,23 @@ class FitnessDetailViewController: UIViewController, UINavigationControllerDeleg
         // Reading the data
         guard let name = nameLabel.text,
               let nutrition = nutritionLabel.text,
-              let coachName = coachNameLabel.text,
               let movement = movementLabel.text,
               let personalRecord = personRecrodLabel.text,
               let goal = goalLabel.text,
-              let score = scoreLabel.text,
               let image = fitnessDisplayImageView.image else { return }
         
         let PRasDouble = Double(personalRecord) ?? 0 // Nil coal
-        let scoreAsDouble = Double(score) ?? 0
         let goalAsInt = Int(goal) ?? 0
         
         
         if viewModel.fitness != nil {
-            viewModel.updateFitness(newName: name, newCoach: coachName, newNutrition: nutrition, newMovement: movement)
+           viewModel.updateFitness(newName: name,newNutrition: nutrition, newMovement: movement)
             viewModel.saveImage(with: image, to: (viewModel.fitness?.id)!)
             
             
             
         } else {
-            viewModel.create(name: name, coachName: coachName, nutrition: nutrition, movement: movement, PR: PRasDouble, score: scoreAsDouble, goal: goalAsInt) { result in
+            viewModel.create(name: name, nutrition: nutrition, movement: movement, PR: PRasDouble, goal: goalAsInt) { result in
                 switch result {
                 case .success(let docId):
                     self.viewModel.saveImage(with: image, to: docId)

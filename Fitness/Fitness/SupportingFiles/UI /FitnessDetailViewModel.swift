@@ -34,9 +34,8 @@ class FitnessDetailViewModel {
     
     
     // cred functions (creating and save)
-    func create(name: String, coachName: String, nutrition: String, movement: String, PR: Double, score: Double, goal: Int, completion: @escaping(Result<String,FirebaseError>) -> Void) {
-//        let sizeDict = Size(small:"Skinny and wants to gain weight with muscle mass", medium:"Wants to add more muscle", large:"Looking to loose fat but maintain muscle")
-        let fitness = Fitness(name: name, coachName: coachName, nutrition: nutrition, movement: movement, PR: PR, score: score, goal: goal)
+    func create(name: String, nutrition: String, movement: String, PR: Double, goal: Int, completion: @escaping(Result<String,FirebaseError>) -> Void) {
+        let fitness = Fitness(name: name, nutrition: nutrition, movement: movement, PR: PR, goal: goal)
         
         save(parmFitness: fitness) { result in
             switch result {
@@ -107,7 +106,7 @@ class FitnessDetailViewModel {
     func updateFitness(newName: String, newCoach: String, newNutrition: String, newMovement: String) {
         
         guard let fitnessToUpdate = self.fitness else { return }
-        let updateFitness = Fitness(id: fitnessToUpdate.id, name: newName, coachName: newCoach, nutrition: newNutrition, movement: newMovement, PR: fitnessToUpdate.PR, score: fitnessToUpdate.score, goal: fitnessToUpdate.goal)
+        let updateFitness = Fitness(id: fitnessToUpdate.id, name: newName, nutrition: newNutrition, movement: newMovement, PR: fitnessToUpdate.PR, goal: fitnessToUpdate.goal)
         
         // calling update the data base with that property
         update(fitness: updateFitness)

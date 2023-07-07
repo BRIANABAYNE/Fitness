@@ -16,20 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fitness " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuT-sz-VZe">
-                                <rect key="frame" x="163" y="103" width="214" height="35.666666666666629"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OLY" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-0c-AH3">
+                                <rect key="frame" x="-1315.6666666666667" y="124.66666666666669" width="3024.3333333333335" height="628"/>
+                                <color key="backgroundColor" red="0.92140346765518188" green="0.60560017824172974" blue="0.82465076446533203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.92140346765518188" green="0.60560017824172974" blue="0.82465076446533203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Briana's Fitness App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuT-sz-VZe">
+                                <rect key="frame" x="89" y="66" width="214" height="35.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <color key="textColor" red="0.34995022416114807" green="0.91159564256668091" blue="0.27513784170150757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OLY" translatesAutoresizingMaskIntoConstraints="NO" id="5Cr-0c-AH3">
-                                <rect key="frame" x="76.666666666666686" y="124.66666666666669" width="240" height="628"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Fz-ID-lUv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5Cr-0c-AH3" firstAttribute="width" secondItem="eac-Nq-uhx" secondAttribute="width" multiplier="0.610687" id="56x-2L-PM5"/>
                             <constraint firstItem="5Cr-0c-AH3" firstAttribute="top" secondItem="xuT-sz-VZe" secondAttribute="bottom" constant="4" id="IA0-6u-wCH"/>
                             <constraint firstItem="9Fz-ID-lUv" firstAttribute="trailing" secondItem="xuT-sz-VZe" secondAttribute="trailing" constant="10" id="M0Y-ro-7tD"/>
                             <constraint firstItem="xuT-sz-VZe" firstAttribute="leading" secondItem="9Fz-ID-lUv" secondAttribute="leading" constant="175" id="O4N-Xy-1yP"/>

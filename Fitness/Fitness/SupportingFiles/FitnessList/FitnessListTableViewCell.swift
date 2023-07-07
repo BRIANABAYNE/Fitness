@@ -11,17 +11,16 @@ class FitnessListTableViewCell: UITableViewCell {
 
   // MARK: - Outlets
     @IBOutlet weak var fitnessNameLabel: UILabel!
-    @IBOutlet weak var fitnessNutritionLabel: UILabel!
-    @IBOutlet weak var coachNameLabel: UILabel!
+    @IBOutlet weak var fitnessPRLabel: UILabel!
+    @IBOutlet weak var fitnessMovementLabel: UILabel!
     
     
     // MARK: -  Methods
     func configure(with fitness: Fitness?) {
         guard let fitness = fitness else {return}
         fitnessNameLabel.text = fitness.name
-        //fitnessSizeLabel.text = "\(fitness.size)" // making it a string becasue it is an double and we need a string with string interp
-        fitnessNutritionLabel.text = fitness.nutrition
-        coachNameLabel.text = fitness.coachName
+        fitnessPRLabel.text = "\(fitness.PR)"
+        fitnessMovementLabel.text = fitness.movement
         
     }
 

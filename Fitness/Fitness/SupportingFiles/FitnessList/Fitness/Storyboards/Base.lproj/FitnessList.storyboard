@@ -24,43 +24,50 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MV-fd-r5M">
-                                            <rect key="frame" x="120" y="41" width="45" height="14"/>
+                                            <rect key="frame" x="70" y="41" width="102.66666666666669" height="38"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="QZm-ZZ-Eav">
-                                            <rect key="frame" x="265" y="31" width="88" height="68"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="QZm-ZZ-Eav">
+                                            <rect key="frame" x="222.66666666666663" y="16" width="140.33333333333337" height="83"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nutrition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuq-XY-yEP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="22.666666666666668"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuq-XY-yEP">
+                                                    <rect key="frame" x="29.999999999999993" y="0.0" width="80.333333333333314" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Coach Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKd-LC-bt2">
-                                                    <rect key="frame" x="0.0" y="47.666666666666671" width="88" height="20.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKd-LC-bt2">
+                                                    <rect key="frame" x="5" y="54" width="130.33333333333334" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Bbk-rF-am6"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fKd-LC-bt2" secondAttribute="trailing" constant="5" id="HOh-hi-r6l"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vuq-XY-yEP" secondAttribute="trailing" constant="30" id="r2t-Tf-8fW"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="QZm-ZZ-Eav" secondAttribute="bottom" constant="40" id="9GA-YY-juW"/>
                                         <constraint firstItem="5MV-fd-r5M" firstAttribute="top" secondItem="kqd-FU-jvS" secondAttribute="topMargin" constant="30" id="IDG-hJ-uUB"/>
-                                        <constraint firstItem="QZm-ZZ-Eav" firstAttribute="leading" secondItem="5MV-fd-r5M" secondAttribute="trailing" constant="100" id="PkK-Al-fq1"/>
-                                        <constraint firstItem="5MV-fd-r5M" firstAttribute="leading" secondItem="kqd-FU-jvS" secondAttribute="leadingMargin" constant="100" id="ZRO-J8-W2Q"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="QZm-ZZ-Eav" secondAttribute="trailing" constant="20" id="jHn-fj-MNA"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="5MV-fd-r5M" secondAttribute="bottom" constant="84" id="lID-xA-drD"/>
-                                        <constraint firstItem="QZm-ZZ-Eav" firstAttribute="top" secondItem="kqd-FU-jvS" secondAttribute="topMargin" constant="20" id="qgI-z6-efn"/>
+                                        <constraint firstItem="QZm-ZZ-Eav" firstAttribute="leading" secondItem="5MV-fd-r5M" secondAttribute="trailing" constant="50" id="PkK-Al-fq1"/>
+                                        <constraint firstItem="5MV-fd-r5M" firstAttribute="leading" secondItem="kqd-FU-jvS" secondAttribute="leadingMargin" constant="50" id="ZRO-J8-W2Q"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QZm-ZZ-Eav" secondAttribute="trailing" constant="10" id="jHn-fj-MNA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5MV-fd-r5M" secondAttribute="bottom" constant="60" id="lID-xA-drD"/>
+                                        <constraint firstItem="QZm-ZZ-Eav" firstAttribute="top" secondItem="kqd-FU-jvS" secondAttribute="topMargin" constant="5" id="toM-dt-80E"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="coachNameLabel" destination="fKd-LC-bt2" id="8YF-v6-QJE"/>
+                                    <outlet property="fitnessMovementLabel" destination="fKd-LC-bt2" id="8YF-v6-QJE"/>
                                     <outlet property="fitnessNameLabel" destination="5MV-fd-r5M" id="QVm-oi-cEz"/>
-                                    <outlet property="fitnessNutritionLabel" destination="Vuq-XY-yEP" id="hnf-tD-vva"/>
+                                    <outlet property="fitnessPRLabel" destination="Vuq-XY-yEP" id="hnf-tD-vva"/>
                                     <segue destination="wdA-o6-FFL" kind="show" id="1ym-rp-7PB"/>
                                 </connections>
                             </tableViewCell>
