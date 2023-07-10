@@ -10,6 +10,7 @@ import FirebaseAuth
 
 struct FirebaseService {
     
+    
     func createAccount(with email: String, password: String, confirmPassword: String) {
         // I only want to create a user if the passwords match 
         
@@ -37,6 +38,7 @@ struct FirebaseService {
     
     
     func signOut() {
+     
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()

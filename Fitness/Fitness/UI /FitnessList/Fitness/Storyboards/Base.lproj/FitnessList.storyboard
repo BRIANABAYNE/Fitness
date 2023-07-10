@@ -77,13 +77,20 @@
                             <outlet property="delegate" destination="0oP-q5-JLY" id="P2t-YJ-svj"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="5xN-T8-szJ">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="wQM-AG-qZ4">
+                            <connections>
+                                <action selector="logOutButtonTapped:" destination="0oP-q5-JLY" id="fuG-wz-Rbo"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dQT-UT-19h">
                             <connections>
                                 <segue destination="wdA-o6-FFL" kind="show" identifier="toDetailVC" id="DkD-oG-mSR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9it-je-l0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

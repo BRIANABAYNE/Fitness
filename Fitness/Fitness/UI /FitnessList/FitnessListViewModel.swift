@@ -55,11 +55,4 @@ class FitnessListViewModel {
     } // end of delete 
     
     
-    
-    
-    
-    
-    
-    
-    
 } // end of ListViewModel

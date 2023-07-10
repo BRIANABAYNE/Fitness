@@ -17,7 +17,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4ym-hJ-e1l" kind="show" id="auY-fo-lZs"/>
+                        <segue destination="Vrm-2j-Iar" kind="relationship" relationship="rootViewController" id="QSN-MF-seX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nh-aH-ODt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -30,7 +30,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="CreateUser" storyboardName="CreateUser" referencedIdentifier="CreateUser" id="GUH-BF-WOB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erq-j0-3ZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773.28244274809163" y="-750"/>
+            <point key="canvasLocation" x="410" y="39"/>
         </scene>
         <!--FitnessDetail-->
         <scene sceneID="3CX-3s-X1f">
@@ -40,7 +40,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NsZ-bW-um7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2309" y="-23"/>
+            <point key="canvasLocation" x="411" y="142"/>
         </scene>
         <!--FitnessList-->
         <scene sceneID="iQd-pf-QsS">
@@ -50,7 +50,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTA-2M-ylN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="-23"/>
+            <point key="canvasLocation" x="411" y="92"/>
         </scene>
         <!--Opener-->
         <scene sceneID="SqQ-Yd-BTv">
