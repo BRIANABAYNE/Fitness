@@ -103,7 +103,7 @@ class FitnessDetailViewModel {
     
     
     
-    func updateFitness(newName: String, newCoach: String, newNutrition: String, newMovement: String) {
+    func updateFitness(newName: String, newNutrition: String, newMovement: String) {
         
         guard let fitnessToUpdate = self.fitness else { return }
         let updateFitness = Fitness(id: fitnessToUpdate.id, name: newName, nutrition: newNutrition, movement: newMovement, PR: fitnessToUpdate.PR, goal: fitnessToUpdate.goal)

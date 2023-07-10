@@ -16,9 +16,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="5QF-7g-R6U" kind="relationship" relationship="rootViewController" id="UIJ-KF-Hel"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nh-aH-ODt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,16 +48,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTA-2M-ylN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1376" y="-23"/>
-        </scene>
-        <!--Opner-->
-        <scene sceneID="Xp4-pH-swQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Opner" id="5QF-7g-R6U" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="g3W-WR-hC8"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7fS-Ci-nMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="402.29007633587787" y="-23.239436619718312"/>
         </scene>
     </scenes>
 </document>

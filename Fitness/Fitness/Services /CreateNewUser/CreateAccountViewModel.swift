@@ -9,7 +9,7 @@ import Foundation
 
 struct CreateAccountViewModel {
     
-    func createAccount(with email: String, password: String, confirmPassword: String) {
+    func createAccount(with email: "brianbayne1@gmail.com", password: "password", confirmPassword:"password") {
      
         FirebaseService().createAccount(with: email, password: password, confirmPassword: confirmPassword)
     }
@@ -27,4 +27,4 @@ func signIn(with email: String, password: String, confirmPassword: String ) {
 }
         
     }
-} // end of Model
+} // end of viewmodel 
