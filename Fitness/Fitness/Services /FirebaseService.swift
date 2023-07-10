@@ -11,7 +11,7 @@ import FirebaseAuth
 struct FirebaseService {
     
     func createAccount(with email: String, password: String, confirmPassword: String) {
-        // I only want to create a user to
+        // I only want to create a user if the passwords match 
         
         if password == confirmPassword {
             Auth.auth().createUser(withEmail:email, password: password) { authResult, error in

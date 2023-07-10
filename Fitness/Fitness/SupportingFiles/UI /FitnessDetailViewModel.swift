@@ -132,15 +132,4 @@ class FitnessDetailViewModel {
         
     } // end of update
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 } // end of DV

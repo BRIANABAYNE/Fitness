@@ -24,14 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             
             if Auth.auth().currentUser != nil {
-                // user has signed in, or created an account
+                // user has signed in, or created an account, the state has changed, does not = nil
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let navigation = storyboard.instantiateViewController(withIdentifier:"Navigation")
                 self.window?.rootViewController = navigation
             } else {
                 // no user signed in
-                let storyboard = UIStoryboard(name: "CreateUser", bundle: nil)
-                let createAccont = storyboard.instantiateViewController(withIdentifier: "CreateUser")
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let createAccont = storyboard.instantiateViewController(withIdentifier: "Opener")
                 self.window?.rootViewController = createAccont
                 
             }

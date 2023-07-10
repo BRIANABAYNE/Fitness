@@ -55,7 +55,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In "/>
                                 <connections>
-                                    <action selector="singInButtonTapped:" destination="8uT-gE-EHI" eventType="touchUpInside" id="ajG-hV-lTo"/>
+                                    <action selector="signInButtonTapped:" destination="8uT-gE-EHI" eventType="touchUpInside" id="ajG-hV-lTo"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OLY 1" translatesAutoresizingMaskIntoConstraints="NO" id="0NR-mQ-GYa">

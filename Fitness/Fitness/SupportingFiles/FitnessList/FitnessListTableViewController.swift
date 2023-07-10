@@ -31,7 +31,7 @@ class FitnessListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel.fitnessSourceOfTruth.count  // We are returning the number of sections by the information we have from the viewModel. propery of SOT. and that will be the count. Nil coal
+        return viewModel.fitnessSourceOfTruth.count // We are returning the number of sections by the information we have from the viewModel. propery of SOT. and that will be the count. 
     }
  
  

@@ -37,8 +37,7 @@ class CreateAccountViewController: UIViewController {
         viewModel.createAccount(with: email, password: password, confirmPassword: confirmPassword)
     }
     
-    
-    @IBAction func singInButtonTapped(_ sender: Any) {
+    @IBAction func signInButtonTapped(_ sender: Any) {
         guard let email = addressLabel.text,
               let password = passwordLabel.text,
               let confirmPassword = confirmPassword.text else { return }
