@@ -8,45 +8,40 @@
 import Foundation
 import FirebaseAuth
 
-struct FirebaseService {
+protocol FirebasServiceable {
+    func createAccount(with email: String, password: String, handler: @escaping(Result<Bool, CreateAccountError>) -> Void)
+    func signIn(with email: String, password: String, handler: @escaping(Result<Bool, CreateAccountError>) -> Void)
+    func signOut()
+}
+
+struct FirebaseService: FirebasServiceable {
     
-    
-    func createAccount(with email: String, password: String, confirmPassword: String) {
-        // I only want to create a user if the passwords match 
-        
-        if password == confirmPassword {
-            Auth.auth().createUser(withEmail:email, password: password) { authResult, error in
-                print(authResult?.user.email)
-                
-            }
-            
-        } else {
-#warning("update to present an alert to user")
-        }
-        
-        
-        
+    func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
+        // I only want to create a user if the passwords match
+            Auth.auth().createUser(withEmail:email, password: password) { authResult, fireBaseError in
+                if let fireBaseError {
+                    completion(.failure(.firebaseError(fireBaseError)))
+                }
+                completion(.success(true))
+     }
     } // created
+                           
     
-    func signIn(email: String, password: String) {
+    func signIn(email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error {
+                completion(.failure(.firebaseError(error)))
             }
-            print(authResult?.user.email!)
+            completion(.success(true))
         }
     } // end of sing in
     
-    
     func signOut() {
-     
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
         } catch let signoutError as NSError {
             print("Error signing out", signoutError)
         }
-        
-    } 
-    
-    
-}
+    }
+} // Firebase Service 

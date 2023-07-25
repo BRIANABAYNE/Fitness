@@ -15,9 +15,7 @@ struct Fitness: Codable {
     let movement: String
     let PR: Double
     let goal: Int
-    let colllectionType: String = "Fitness"
-
-    
+    let colllectionType: String 
 }
 
 

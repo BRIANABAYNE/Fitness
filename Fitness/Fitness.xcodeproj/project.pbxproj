@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1CADD12A5769FA00D3B37D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3A1CADD02A5769FA00D3B37D /* FirebaseAuth */; };
+		3A1CADD32A5775B000D3B37D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADD22A5775B000D3B37D /* FirebaseService.swift */; };
+		3A1CADD52A57789E00D3B37D /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADD42A57789E00D3B37D /* CreateAccountViewModel.swift */; };
+		3A1CADD72A57799C00D3B37D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADD62A57799C00D3B37D /* CreateAccountViewController.swift */; };
+		3A1CADDD2A5787E700D3B37D /* CreateUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1CADDB2A5787E700D3B37D /* CreateUser.storyboard */; };
+		3A1CADE02A57883900D3B37D /* FitnessDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1CADDE2A57883800D3B37D /* FitnessDetail.storyboard */; };
+		3A1CADE32A57888C00D3B37D /* FitnessList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1CADE12A57888C00D3B37D /* FitnessList.storyboard */; };
+		3A1CADEA2A578E5300D3B37D /* OpenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADE92A578E5300D3B37D /* OpenerViewController.swift */; };
 		3A61E3812A54A0AD009BB911 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A61E3802A54A0AD009BB911 /* FirebaseFirestoreSwift */; };
 		3A61E3852A54A760009BB911 /* FitnessListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61E3842A54A760009BB911 /* FitnessListTableViewController.swift */; };
 		3A61E3872A54A7AE009BB911 /* FitnessListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61E3862A54A7AE009BB911 /* FitnessListTableViewCell.swift */; };
@@ -14,6 +22,9 @@
 		3A61E3912A562CA2009BB911 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A61E3902A562CA2009BB911 /* FirebaseStorage */; };
 		3A61E3932A562E89009BB911 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61E3922A562E89009BB911 /* Constants.swift */; };
 		3A61E3952A562EFB009BB911 /* FirebaseError .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61E3942A562EFB009BB911 /* FirebaseError .swift */; };
+		3AAE28262A5C6B69005226C4 /* Opener.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAE28242A5C6B69005226C4 /* Opener.storyboard */; };
+		3ABCDB342A5EEA2B00BED3EA /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCDB332A5EEA2B00BED3EA /* AlertPresentable.swift */; };
+		3ABCDB362A5EEA8C00BED3EA /* CreateAccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCDB352A5EEA8C00BED3EA /* CreateAccountError.swift */; };
 		3ADB1C3F2A53629B00403C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C3E2A53629B00403C17 /* AppDelegate.swift */; };
 		3ADB1C412A53629B00403C17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C402A53629B00403C17 /* SceneDelegate.swift */; };
 		3ADB1C462A53629B00403C17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADB1C442A53629B00403C17 /* Main.storyboard */; };
@@ -23,15 +34,25 @@
 		3ADB1C572A5363B900403C17 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3ADB1C562A5363B900403C17 /* FirebaseFirestore */; };
 		3ADB1C5B2A53657500403C17 /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C5A2A53657500403C17 /* Fitness.swift */; };
 		3ADB1C5D2A536A7A00403C17 /* FitnessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C5C2A536A7A00403C17 /* FitnessDetailViewController.swift */; };
-		3ADB1C5F2A536C0600403C17 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C5E2A536C0600403C17 /* DetailViewModel.swift */; };
+		3ADB1C5F2A536C0600403C17 /* FitnessDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB1C5E2A536C0600403C17 /* FitnessDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A1CADD22A5775B000D3B37D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		3A1CADD42A57789E00D3B37D /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		3A1CADD62A57799C00D3B37D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		3A1CADDC2A5787E700D3B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fitness/Storyboards/Base.lproj/CreateUser.storyboard; sourceTree = "<group>"; };
+		3A1CADDF2A57883900D3B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fitness/Storyboards/Base.lproj/FitnessDetail.storyboard; sourceTree = "<group>"; };
+		3A1CADE22A57888C00D3B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fitness/Storyboards/Base.lproj/FitnessList.storyboard; sourceTree = "<group>"; };
+		3A1CADE92A578E5300D3B37D /* OpenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenerViewController.swift; sourceTree = "<group>"; };
 		3A61E3842A54A760009BB911 /* FitnessListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessListTableViewController.swift; sourceTree = "<group>"; };
 		3A61E3862A54A7AE009BB911 /* FitnessListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessListTableViewCell.swift; sourceTree = "<group>"; };
 		3A61E3882A54AAFE009BB911 /* FitnessListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessListViewModel.swift; sourceTree = "<group>"; };
 		3A61E3922A562E89009BB911 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A61E3942A562EFB009BB911 /* FirebaseError .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseError .swift"; sourceTree = "<group>"; };
+		3AAE28252A5C6B69005226C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fitness/Storyboards/Base.lproj/Opener.storyboard; sourceTree = "<group>"; };
+		3ABCDB332A5EEA2B00BED3EA /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		3ABCDB352A5EEA8C00BED3EA /* CreateAccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountError.swift; sourceTree = "<group>"; };
 		3ADB1C3B2A53629B00403C17 /* Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADB1C3E2A53629B00403C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADB1C402A53629B00403C17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +63,7 @@
 		3ADB1C522A5362F800403C17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3ADB1C5A2A53657500403C17 /* Fitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
 		3ADB1C5C2A536A7A00403C17 /* FitnessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDetailViewController.swift; sourceTree = "<group>"; };
-		3ADB1C5E2A536C0600403C17 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		3ADB1C5E2A536C0600403C17 /* FitnessDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +74,45 @@
 				3ADB1C572A5363B900403C17 /* FirebaseFirestore in Frameworks */,
 				3A61E3812A54A0AD009BB911 /* FirebaseFirestoreSwift in Frameworks */,
 				3A61E3912A562CA2009BB911 /* FirebaseStorage in Frameworks */,
+				3A1CADD12A5769FA00D3B37D /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1CADD92A57857200D3B37D /* Services  */ = {
+			isa = PBXGroup;
+			children = (
+				3A1CADD22A5775B000D3B37D /* FirebaseService.swift */,
+				3ABCDB352A5EEA8C00BED3EA /* CreateAccountError.swift */,
+				3A61E3922A562E89009BB911 /* Constants.swift */,
+				3A61E3942A562EFB009BB911 /* FirebaseError .swift */,
+			);
+			path = "Services ";
+			sourceTree = "<group>";
+		};
+		3A1CADDA2A5785EE00D3B37D /* UI  */ = {
+			isa = PBXGroup;
+			children = (
+				3AAE28282A5CB3B8005226C4 /* Opener */,
+				3A1CADE52A5788A800D3B37D /* CreateNewUser */,
+				3AAE28272A5CB363005226C4 /* FitnessDetail */,
+				3A61E3832A54A6F7009BB911 /* FitnessList */,
+			);
+			path = "UI ";
+			sourceTree = "<group>";
+		};
+		3A1CADE52A5788A800D3B37D /* CreateNewUser */ = {
+			isa = PBXGroup;
+			children = (
+				3A1CADD42A57789E00D3B37D /* CreateAccountViewModel.swift */,
+				3A1CADD62A57799C00D3B37D /* CreateAccountViewController.swift */,
+				3A1CADDB2A5787E700D3B37D /* CreateUser.storyboard */,
+			);
+			path = CreateNewUser;
+			sourceTree = "<group>";
+		};
 		3A61E37F2A54A0AD009BB911 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +120,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3A61E3832A54A6F7009BB911 /* New Group */ = {
+		3A61E3832A54A6F7009BB911 /* FitnessList */ = {
 			isa = PBXGroup;
 			children = (
-				3ADB1C5C2A536A7A00403C17 /* FitnessDetailViewController.swift */,
+				3A1CADE12A57888C00D3B37D /* FitnessList.storyboard */,
 				3A61E3842A54A760009BB911 /* FitnessListTableViewController.swift */,
 				3A61E3862A54A7AE009BB911 /* FitnessListTableViewCell.swift */,
 				3A61E3882A54AAFE009BB911 /* FitnessListViewModel.swift */,
 			);
-			path = "New Group";
+			path = FitnessList;
+			sourceTree = "<group>";
+		};
+		3AAE28272A5CB363005226C4 /* FitnessDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3A1CADDE2A57883800D3B37D /* FitnessDetail.storyboard */,
+				3ADB1C5C2A536A7A00403C17 /* FitnessDetailViewController.swift */,
+				3ADB1C5E2A536C0600403C17 /* FitnessDetailViewModel.swift */,
+			);
+			path = FitnessDetail;
+			sourceTree = "<group>";
+		};
+		3AAE28282A5CB3B8005226C4 /* Opener */ = {
+			isa = PBXGroup;
+			children = (
+				3AAE28242A5C6B69005226C4 /* Opener.storyboard */,
+				3A1CADE92A578E5300D3B37D /* OpenerViewController.swift */,
+			);
+			path = Opener;
+			sourceTree = "<group>";
+		};
+		3ABCDB322A5EE9EB00BED3EA /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				3ABCDB332A5EEA2B00BED3EA /* AlertPresentable.swift */,
+			);
+			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 		3ADB1C322A53629B00403C17 = {
@@ -97,11 +178,13 @@
 		3ADB1C3D2A53629B00403C17 /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
-				3ADB1C582A5364E500403C17 /* Storyboards */,
-				3ADB1C592A5364FD00403C17 /* Model  */,
 				3ADB1C522A5362F800403C17 /* GoogleService-Info.plist */,
+				3A1CADDA2A5785EE00D3B37D /* UI  */,
 				3ADB1C542A53630900403C17 /* SupportingFiles */,
-				3A61E3832A54A6F7009BB911 /* New Group */,
+				3A1CADD92A57857200D3B37D /* Services  */,
+				3ADB1C582A5364E500403C17 /* Storyboards */,
+				3ABCDB322A5EE9EB00BED3EA /* Helper Files */,
+				3ADB1C592A5364FD00403C17 /* Model  */,
 			);
 			path = Fitness;
 			sourceTree = "<group>";
@@ -113,8 +196,6 @@
 				3ADB1C402A53629B00403C17 /* SceneDelegate.swift */,
 				3ADB1C472A53629C00403C17 /* Assets.xcassets */,
 				3ADB1C3E2A53629B00403C17 /* AppDelegate.swift */,
-				3A61E3922A562E89009BB911 /* Constants.swift */,
-				3A61E3942A562EFB009BB911 /* FirebaseError .swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -132,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				3ADB1C5A2A53657500403C17 /* Fitness.swift */,
-				3ADB1C5E2A536C0600403C17 /* DetailViewModel.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -157,6 +237,7 @@
 				3ADB1C562A5363B900403C17 /* FirebaseFirestore */,
 				3A61E3802A54A0AD009BB911 /* FirebaseFirestoreSwift */,
 				3A61E3902A562CA2009BB911 /* FirebaseStorage */,
+				3A1CADD02A5769FA00D3B37D /* FirebaseAuth */,
 			);
 			productName = Fitness;
 			productReference = 3ADB1C3B2A53629B00403C17 /* Fitness.app */;
@@ -203,9 +284,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1CADDD2A5787E700D3B37D /* CreateUser.storyboard in Resources */,
+				3AAE28262A5C6B69005226C4 /* Opener.storyboard in Resources */,
 				3ADB1C4B2A53629C00403C17 /* LaunchScreen.storyboard in Resources */,
 				3ADB1C532A5362F800403C17 /* GoogleService-Info.plist in Resources */,
 				3ADB1C482A53629C00403C17 /* Assets.xcassets in Resources */,
+				3A1CADE32A57888C00D3B37D /* FitnessList.storyboard in Resources */,
+				3A1CADE02A57883900D3B37D /* FitnessDetail.storyboard in Resources */,
 				3ADB1C462A53629B00403C17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,15 +302,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ADB1C5F2A536C0600403C17 /* DetailViewModel.swift in Sources */,
+				3ADB1C5F2A536C0600403C17 /* FitnessDetailViewModel.swift in Sources */,
 				3ADB1C5B2A53657500403C17 /* Fitness.swift in Sources */,
+				3A1CADD32A5775B000D3B37D /* FirebaseService.swift in Sources */,
+				3A1CADEA2A578E5300D3B37D /* OpenerViewController.swift in Sources */,
 				3A61E3852A54A760009BB911 /* FitnessListTableViewController.swift in Sources */,
+				3A1CADD52A57789E00D3B37D /* CreateAccountViewModel.swift in Sources */,
+				3A1CADD72A57799C00D3B37D /* CreateAccountViewController.swift in Sources */,
+				3ABCDB342A5EEA2B00BED3EA /* AlertPresentable.swift in Sources */,
 				3A61E3872A54A7AE009BB911 /* FitnessListTableViewCell.swift in Sources */,
 				3ADB1C3F2A53629B00403C17 /* AppDelegate.swift in Sources */,
 				3ADB1C5D2A536A7A00403C17 /* FitnessDetailViewController.swift in Sources */,
 				3A61E3952A562EFB009BB911 /* FirebaseError .swift in Sources */,
 				3A61E3892A54AAFE009BB911 /* FitnessListViewModel.swift in Sources */,
 				3ADB1C412A53629B00403C17 /* SceneDelegate.swift in Sources */,
+				3ABCDB362A5EEA8C00BED3EA /* CreateAccountError.swift in Sources */,
 				3A61E3932A562E89009BB911 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +324,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3A1CADDB2A5787E700D3B37D /* CreateUser.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A1CADDC2A5787E700D3B37D /* Base */,
+			);
+			name = CreateUser.storyboard;
+			sourceTree = "<group>";
+		};
+		3A1CADDE2A57883800D3B37D /* FitnessDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A1CADDF2A57883900D3B37D /* Base */,
+			);
+			name = FitnessDetail.storyboard;
+			sourceTree = "<group>";
+		};
+		3A1CADE12A57888C00D3B37D /* FitnessList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A1CADE22A57888C00D3B37D /* Base */,
+			);
+			name = FitnessList.storyboard;
+			sourceTree = "<group>";
+		};
+		3AAE28242A5C6B69005226C4 /* Opener.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AAE28252A5C6B69005226C4 /* Base */,
+			);
+			name = Opener.storyboard;
+			sourceTree = "<group>";
+		};
 		3ADB1C442A53629B00403C17 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -457,6 +580,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A1CADD02A5769FA00D3B37D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3ADB1C552A5363B900403C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		3A61E3802A54A0AD009BB911 /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3ADB1C552A5363B900403C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

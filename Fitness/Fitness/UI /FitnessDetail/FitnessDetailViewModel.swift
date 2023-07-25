@@ -35,7 +35,7 @@ class FitnessDetailViewModel {
     
     // cred functions (creating and save)
     func create(name: String, nutrition: String, movement: String, PR: Double, goal: Int, completion: @escaping(Result<String,FirebaseError>) -> Void) {
-        let fitness = Fitness(name: name, nutrition: nutrition, movement: movement, PR: PR, goal: goal)
+        let fitness = Fitness(name: name, nutrition: nutrition, movement: movement, PR: PR, goal: goal, colllectionType: Constants.Fitness.fitnessCollectionPath)
         
         save(parmFitness: fitness) { result in
             switch result {
@@ -99,22 +99,16 @@ class FitnessDetailViewModel {
         
     } // end of save
     
-    
-    
-    
-    
     func updateFitness(newName: String, newNutrition: String, newMovement: String) {
         
         guard let fitnessToUpdate = self.fitness else { return }
-        let updateFitness = Fitness(id: fitnessToUpdate.id, name: newName, nutrition: newNutrition, movement: newMovement, PR: fitnessToUpdate.PR, goal: fitnessToUpdate.goal)
+        let updateFitness = Fitness(id: fitnessToUpdate.id, name: newName, nutrition: newNutrition, movement: newMovement, PR: fitnessToUpdate.PR, goal: fitnessToUpdate.goal, colllectionType: Constants.Fitness.fitnessCollectionPath)
         
         // calling update the data base with that property
         update(fitness: updateFitness)
     }
     
-    
-    
-    
+
     func update(fitness: Fitness) {
         if let documentID = fitness.id {
             let ref = Firestore.firestore() // PATH TO FIRESTORE

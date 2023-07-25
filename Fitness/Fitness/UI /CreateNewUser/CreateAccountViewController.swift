@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, AlertPresentable {
     
     // MARK: - outlets
     
@@ -22,7 +22,7 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CreateAccountViewModel()
+        viewModel = CreateAccountViewModel(delegate: self)
         
     }
     
@@ -41,8 +41,14 @@ class CreateAccountViewController: UIViewController {
         guard let email = addressLabel.text,
               let password = passwordLabel.text,
               let confirmPassword = confirmPassword.text else { return }
-        viewModel.signIn(with: email, password: password, confirmPassword: confirmPassword)
-    }
+        viewModel.signIn(with: email, password: password)
+    } // sing button tapped
 
     
+} // end of VC
+
+extension CreateAccountViewController: CreateAccountViewModelDelegate {
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: "Oh no!")
+    }
 }
