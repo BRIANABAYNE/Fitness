@@ -14,7 +14,7 @@ protocol FirebasServiceable {
     func signOut()
 }
 
-struct FirebaseService: FirebasServiceable {
+struct FirebaseAuthService: FirebasServiceable {
  
     
     func createAccount(with email: String, password: String, confirmPassword: String, completion: @escaping(Result<Bool, CreateAccountError>) -> Void) {

@@ -19,7 +19,7 @@ struct CreateAccountViewModel {
     weak var delegate: CreateAccountViewModelDelegate?
     
     // MARK: - Dependency Injection
-    init(service: FirebasServiceable = FirebaseService(), delegate: CreateAccountViewModelDelegate) {
+    init(service: FirebasServiceable = FirebaseAuthService(), delegate: CreateAccountViewModelDelegate) {
         self.service = service
         self.delegate = delegate
     }

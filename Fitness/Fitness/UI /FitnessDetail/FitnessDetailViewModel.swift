@@ -26,7 +26,7 @@ class FitnessDetailViewModel {
     private var fitnessService: FirebasServiceable
     
     // MARK: - Dependency Injection
-    init(fitness: Fitness?, injectedDelegate: FitnessDetailViewModelDelegate, fitnessService: FirebasServiceable = FirebaseService()) {
+    init(fitness: Fitness?, injectedDelegate: FitnessDetailViewModelDelegate, fitnessService: FirebasServiceable = FirebaseAuthService()) {
         self.fitness = fitness
         self.delegate = injectedDelegate
         self.fitnessService = fitnessService
@@ -102,7 +102,7 @@ class FitnessDetailViewModel {
     
     func update(fitness: Fitness) {
         if let documentID = fitness.id {
-            let ref = Firestore.firestore() // PATH TO FIRESTORE
+            let ref = Firestore.firestore() 
             let docRef = ref.collection(Constants.Fitness.fitnessCollectionPath).document(documentID) // collection, doc, collection, doc per firebase
             
             do {

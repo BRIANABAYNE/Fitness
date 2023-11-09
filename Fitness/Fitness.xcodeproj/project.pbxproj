@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3A1CADD12A5769FA00D3B37D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3A1CADD02A5769FA00D3B37D /* FirebaseAuth */; };
-		3A1CADD32A5775B000D3B37D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADD22A5775B000D3B37D /* FirebaseService.swift */; };
+		3A1CADD32A5775B000D3B37D /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADD22A5775B000D3B37D /* FirebaseAuthService.swift */; };
 		3A1CADD52A57789E00D3B37D /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADD42A57789E00D3B37D /* CreateAccountViewModel.swift */; };
 		3A1CADD72A57799C00D3B37D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADD62A57799C00D3B37D /* CreateAccountViewController.swift */; };
 		3A1CADDD2A5787E700D3B37D /* CreateUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1CADDB2A5787E700D3B37D /* CreateUser.storyboard */; };
 		3A1CADE02A57883900D3B37D /* FitnessDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1CADDE2A57883800D3B37D /* FitnessDetail.storyboard */; };
 		3A1CADE32A57888C00D3B37D /* FitnessList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1CADE12A57888C00D3B37D /* FitnessList.storyboard */; };
 		3A1CADEA2A578E5300D3B37D /* OpenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CADE92A578E5300D3B37D /* OpenerViewController.swift */; };
+		3A3C57392AFD23E200BCB2AF /* FirebaseDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C57382AFD23E200BCB2AF /* FirebaseDataBaseService.swift */; };
 		3A61E3812A54A0AD009BB911 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A61E3802A54A0AD009BB911 /* FirebaseFirestoreSwift */; };
 		3A61E3852A54A760009BB911 /* FitnessListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61E3842A54A760009BB911 /* FitnessListTableViewController.swift */; };
 		3A61E3872A54A7AE009BB911 /* FitnessListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61E3862A54A7AE009BB911 /* FitnessListTableViewCell.swift */; };
@@ -38,13 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A1CADD22A5775B000D3B37D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		3A1CADD22A5775B000D3B37D /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		3A1CADD42A57789E00D3B37D /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		3A1CADD62A57799C00D3B37D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3A1CADDC2A5787E700D3B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fitness/Storyboards/Base.lproj/CreateUser.storyboard; sourceTree = "<group>"; };
 		3A1CADDF2A57883900D3B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fitness/Storyboards/Base.lproj/FitnessDetail.storyboard; sourceTree = "<group>"; };
 		3A1CADE22A57888C00D3B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Fitness/Storyboards/Base.lproj/FitnessList.storyboard; sourceTree = "<group>"; };
 		3A1CADE92A578E5300D3B37D /* OpenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenerViewController.swift; sourceTree = "<group>"; };
+		3A3C57382AFD23E200BCB2AF /* FirebaseDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataBaseService.swift; sourceTree = "<group>"; };
 		3A61E3842A54A760009BB911 /* FitnessListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessListTableViewController.swift; sourceTree = "<group>"; };
 		3A61E3862A54A7AE009BB911 /* FitnessListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessListTableViewCell.swift; sourceTree = "<group>"; };
 		3A61E3882A54AAFE009BB911 /* FitnessListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessListViewModel.swift; sourceTree = "<group>"; };
@@ -84,7 +86,8 @@
 		3A1CADD92A57857200D3B37D /* Services  */ = {
 			isa = PBXGroup;
 			children = (
-				3A1CADD22A5775B000D3B37D /* FirebaseService.swift */,
+				3A1CADD22A5775B000D3B37D /* FirebaseAuthService.swift */,
+				3A3C57382AFD23E200BCB2AF /* FirebaseDataBaseService.swift */,
 				3ABCDB352A5EEA8C00BED3EA /* CreateAccountError.swift */,
 				3A61E3922A562E89009BB911 /* Constants.swift */,
 				3A61E3942A562EFB009BB911 /* FirebaseError .swift */,
@@ -304,7 +307,7 @@
 			files = (
 				3ADB1C5F2A536C0600403C17 /* FitnessDetailViewModel.swift in Sources */,
 				3ADB1C5B2A53657500403C17 /* Fitness.swift in Sources */,
-				3A1CADD32A5775B000D3B37D /* FirebaseService.swift in Sources */,
+				3A1CADD32A5775B000D3B37D /* FirebaseAuthService.swift in Sources */,
 				3A1CADEA2A578E5300D3B37D /* OpenerViewController.swift in Sources */,
 				3A61E3852A54A760009BB911 /* FitnessListTableViewController.swift in Sources */,
 				3A1CADD52A57789E00D3B37D /* CreateAccountViewModel.swift in Sources */,
@@ -312,6 +315,7 @@
 				3ABCDB342A5EEA2B00BED3EA /* AlertPresentable.swift in Sources */,
 				3A61E3872A54A7AE009BB911 /* FitnessListTableViewCell.swift in Sources */,
 				3ADB1C3F2A53629B00403C17 /* AppDelegate.swift in Sources */,
+				3A3C57392AFD23E200BCB2AF /* FirebaseDataBaseService.swift in Sources */,
 				3ADB1C5D2A536A7A00403C17 /* FitnessDetailViewController.swift in Sources */,
 				3A61E3952A562EFB009BB911 /* FirebaseError .swift in Sources */,
 				3A61E3892A54AAFE009BB911 /* FitnessListViewModel.swift in Sources */,

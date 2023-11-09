@@ -31,7 +31,7 @@ class FitnessListTableViewController: UITableViewController {
     // This is not currently connected to anything that can send an action
     // Next steps would be to place a button, then link this action to that button
     @IBAction func logOutButtonTapped(_ sender: Any) {
-        FirebaseService().signOut()
+        FirebaseAuthService().signOut()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
