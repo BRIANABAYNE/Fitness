@@ -11,7 +11,7 @@
         <!--Opener View Controller-->
         <scene sceneID="0c7-Ci-aBo">
             <objects>
-                <viewController storyboardIdentifier="Opener" id="siR-nB-Kgm" customClass="OpenerViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Opener" useStoryboardIdentifierAsRestorationIdentifier="YES" id="siR-nB-Kgm" customClass="OpenerViewController" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZw-q5-xBA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

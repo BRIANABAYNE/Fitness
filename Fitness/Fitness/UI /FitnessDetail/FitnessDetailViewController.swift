@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FitnessDetailViewController: UIViewController, UINavigationControllerDelegate {
+class FitnessDetailViewController: UIViewController, AlertPresentable, UINavigationControllerDelegate {
     
     // MARK: - Outlets
     
@@ -74,7 +74,7 @@ class FitnessDetailViewController: UIViewController, UINavigationControllerDeleg
         let goalAsInt = Int(goal) ?? 0
         
         if viewModel.fitness != nil {
-            viewModel.updateFitness(newName: name,newNutrition: nutrition, newMovement: movement)
+            viewModel.updateAlthete(newName: name, newNutrition: nutrition, newMovement: movement)
             viewModel.saveImage(with: image, to: (viewModel.fitness?.id)!)
             
         } else {
@@ -106,8 +106,12 @@ extension FitnessDetailViewController: UIImagePickerControllerDelegate, UINaviga
 
 extension FitnessDetailViewController: FitnessDetailViewModelDelegate {
     func imageLoadedSuccessfully() {
-        DispatchQueue.main.async { // main thread UI change
+        DispatchQueue.main.async {
             self.fitnessDisplayImageView.image = self.viewModel.image
         }
+    }
+    
+    func encountered(_ error: Error) {
+        presentAlert(message: error.localizedDescription, title: "Oh no!")
     }
 }
