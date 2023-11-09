@@ -8,51 +8,46 @@
 import Foundation
 import FirebaseFirestore
 
-
-// creating the job posting and that is the first step when setting a protocal and delegate
+// MARK: - Protocol
 protocol FitnessListViewModelDelegate: FitnessListTableViewController {
     func successfullyLoadedData()
 }
 
 class FitnessListViewModel {
     
-    
     // MARK: - Properties
-    
-    
-    var fitnessSourceOfTruth: [Fitness] = []
-    // The task that the person who is hired will do.
+    var service: FirebaseDataBaseServiceable
+    var fitnessSourceOfTruth: [Fitness]?
     weak var delegate: FitnessListViewModelDelegate?
-    
-    // Dependency Injection - Makes our code easier to test
-    init(injectedDelegate: FitnessListViewModelDelegate) {
-        self.delegate = injectedDelegate // hiring the person
-        fetchAllAthletes() // duty of the person hired
+
+    // MARK: - Dependency Injection
+    init(injectedDelegate: FitnessListViewModelDelegate, service: FirebaseDataBaseServiceable = FirebaseDataBaseService()) {
+        self.delegate = injectedDelegate
+        self.service = service
     }
     
-    
     func fetchAllAthletes() {
-        let db = Firestore.firestore()
-        db.collection(Constants.Fitness.fitnessCollectionPath).getDocuments { snapshot, error in
-            guard let documents = snapshot?.documents else { return }
-            
-            do {
-                let fitnessArray = try documents.compactMap({ try $0.data(as: Fitness.self)})
-                self.fitnessSourceOfTruth = fitnessArray
-                self.delegate?.successfullyLoadedData()
-                print(fitnessArray)
-            } catch {
-                
+        service.fetchAllAthletes { [weak self] result in
+            switch result {
+            case .success(let fetchedAlthletes):
+                self?.fitnessSourceOfTruth = fetchedAlthletes
+                self?.delegate?.successfullyLoadedData()
+            case .failure(let error):
+                self?.delegate?.encountered(error)
             }
         }
-    } // end of fetch all athletes
+    }
     
-    func delete(indexPath: IndexPath) {
-        let db = Firestore.firestore()
-        let fitness = fitnessSourceOfTruth[indexPath.row] 
-        db.collection(Constants.Fitness.fitnessCollectionPath).document(fitness.id!).delete(completion:nil)
-        fitnessSourceOfTruth.remove(at: indexPath.row)
-    } // end of delete 
-    
-    
-} // end of ListViewModel
+    func delete(indexPath: IndexPath, callback: @escaping () -> Void) {
+        guard let fitness = fitnessSourceOfTruth?[indexPath.row] else { return }
+        service.deleteAtheleteInfo(fitness: fitness) { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.fitnessSourceOfTruth?.remove(at: indexPath.row)
+                callback()
+            case .failure(let failure):
+                self?.delegate?.encountered(failure)
+            }
+        }
+    }
+}

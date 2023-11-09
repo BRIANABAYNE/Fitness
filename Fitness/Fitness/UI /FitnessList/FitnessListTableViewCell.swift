@@ -21,7 +21,6 @@ class FitnessListTableViewCell: UITableViewCell {
         fitnessNameLabel.text = fitness.name
         fitnessPRLabel.text = "\(fitness.PR)"
         fitnessMovementLabel.text = fitness.movement
-        
     }
 
 } // end of class 

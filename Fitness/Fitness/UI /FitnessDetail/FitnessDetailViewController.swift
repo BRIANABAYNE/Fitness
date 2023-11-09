@@ -29,16 +29,14 @@ class FitnessDetailViewController: UIViewController, AlertPresentable, UINavigat
         setupImageView()
         configureView()
     }
-    
-    var fitness: Fitness?
-    
+
     // MARK: - Methods
     private func configureView() {
         guard let fitness = viewModel?.fitness else { return }
         nameLabel.text = fitness.name
         movementLabel.text = fitness.movement
-        personRecrodLabel.text = "\(fitness.PR)" // string interp
-        goalLabel.text = "\(fitness.goal)" // string interp
+        personRecrodLabel.text = "\(fitness.PR)"
+        goalLabel.text = "\(fitness.goal)"
         nutritionLabel.text = fitness.nutrition
         
         viewModel.fetchImage(with:fitness.id)
@@ -70,14 +68,15 @@ class FitnessDetailViewController: UIViewController, AlertPresentable, UINavigat
               let goal = goalLabel.text,
               let image = fitnessDisplayImageView.image else { return }
         
-        let PRasDouble = Double(personalRecord) ?? 0
+        let PRasDouble = Double(personalRecord) ?? 0.0
         let goalAsInt = Int(goal) ?? 0
         
         if viewModel.fitness != nil {
+            
             viewModel.updateAlthete(newName: name, newNutrition: nutrition, newMovement: movement)
             viewModel.saveImage(with: image, to: (viewModel.fitness?.id)!)
             
-        } else {
+        } else if viewModel.fitness == nil {
             
             viewModel.create(name: name, nutrition: nutrition, movement: movement, PR: PRasDouble, goal: goalAsInt) { result in
                 switch result {
