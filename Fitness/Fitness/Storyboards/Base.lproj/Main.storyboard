@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vvy-XZ-6ZJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5A2-FL-XN8">
+            <objects>
+                <navigationController storyboardIdentifier="Navigation" automaticallyAdjustsScrollViewInsets="NO" id="Vvy-XZ-6ZJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jh4-p0-0Ay">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vrm-2j-Iar" kind="relationship" relationship="rootViewController" id="QSN-MF-seX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nh-aH-ODt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575" y="-9"/>
+        </scene>
+        <!--CreateUser-->
+        <scene sceneID="PSA-YI-fxS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CreateUser" storyboardName="CreateUser" referencedIdentifier="CreateUser" id="GUH-BF-WOB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erq-j0-3ZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="39"/>
+        </scene>
+        <!--FitnessDetail-->
+        <scene sceneID="3CX-3s-X1f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FitnessDetail" id="wdA-o6-FFL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Xxh-oM-scz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsZ-bW-um7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="142"/>
+        </scene>
+        <!--FitnessList-->
+        <scene sceneID="iQd-pf-QsS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FitnessList" id="Vrm-2j-Iar" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="p8k-Wy-eAt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTA-2M-ylN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="92"/>
+        </scene>
+        <!--Opener-->
+        <scene sceneID="SqQ-Yd-BTv">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Opener" storyboardName="Opener" referencedIdentifier="Opener" id="4ym-hJ-e1l" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YBw-z2-tIY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyF-rg-GH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="-9"/>
+        </scene>
+    </scenes>
+</document>
