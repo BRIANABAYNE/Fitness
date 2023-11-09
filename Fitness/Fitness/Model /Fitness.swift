@@ -17,5 +17,3 @@ struct Fitness: Codable {
     let goal: Int
     let colllectionType: String 
 }
-
-

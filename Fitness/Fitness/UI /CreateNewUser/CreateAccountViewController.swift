@@ -26,7 +26,6 @@ class CreateAccountViewController: UIViewController, AlertPresentable {
         
     }
     
-
     // MARK: - Actions
     
     @IBAction func createButtonTapped(_ sender: Any) {
@@ -41,11 +40,10 @@ class CreateAccountViewController: UIViewController, AlertPresentable {
         guard let email = addressLabel.text,
               let password = passwordLabel.text,
               let confirmPassword = confirmPassword.text else { return }
-        viewModel.signIn(with: email, password: password)
-    } // sing button tapped
-
+        viewModel.signIn(with: email, password: password, confirmPassword: confirmPassword)
+    }
     
-} // end of VC
+} 
 
 extension CreateAccountViewController: CreateAccountViewModelDelegate {
     func encountered(_ error: Error) {

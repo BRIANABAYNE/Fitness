@@ -178,13 +178,12 @@
 		3ADB1C3D2A53629B00403C17 /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
-				3ADB1C522A5362F800403C17 /* GoogleService-Info.plist */,
+				3ADB1C592A5364FD00403C17 /* Model  */,
+				3A1CADD92A57857200D3B37D /* Services  */,
 				3A1CADDA2A5785EE00D3B37D /* UI  */,
 				3ADB1C542A53630900403C17 /* SupportingFiles */,
-				3A1CADD92A57857200D3B37D /* Services  */,
 				3ADB1C582A5364E500403C17 /* Storyboards */,
 				3ABCDB322A5EE9EB00BED3EA /* Helper Files */,
-				3ADB1C592A5364FD00403C17 /* Model  */,
 			);
 			path = Fitness;
 			sourceTree = "<group>";
@@ -192,6 +191,7 @@
 		3ADB1C542A53630900403C17 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3ADB1C522A5362F800403C17 /* GoogleService-Info.plist */,
 				3ADB1C4C2A53629C00403C17 /* Info.plist */,
 				3ADB1C402A53629B00403C17 /* SceneDelegate.swift */,
 				3ADB1C472A53629C00403C17 /* Assets.xcassets */,

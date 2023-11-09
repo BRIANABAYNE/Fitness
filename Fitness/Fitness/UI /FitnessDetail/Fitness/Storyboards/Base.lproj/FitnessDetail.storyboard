@@ -78,6 +78,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XqV-5e-Ama"/>
                     <connections>
+                        <outlet property="addButtonTap" destination="EAC-Oh-R8z" id="zuZ-Uo-fbD"/>
                         <outlet property="fitnessDisplayImageView" destination="mNx-zh-ckz" id="WUE-SQ-F6A"/>
                         <outlet property="goalLabel" destination="Pd6-Uy-IcA" id="D0N-MD-cmK"/>
                         <outlet property="movementLabel" destination="EyY-VC-73d" id="Twx-DI-LUa"/>

@@ -9,7 +9,6 @@ import UIKit
 
 class OpenerViewController: UIViewController {
     
-    
     var window: UIWindow?
     
     override func viewDidLoad() {
@@ -22,8 +21,6 @@ class OpenerViewController: UIViewController {
             let navigation = storyboard.instantiateViewController(withIdentifier: "CreateUser")
             self.window?.rootViewController = navigation
         })
-        
-        
     }
     
 }

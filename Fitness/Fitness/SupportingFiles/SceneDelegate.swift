@@ -31,8 +31,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else {
                 // no user signed in
                 let storyboard = UIStoryboard(name: "CreateUser", bundle: nil)
-                let createAccont = storyboard.instantiateViewController(withIdentifier: "CreateUser")
-                self.window?.rootViewController = createAccont
+                let createAccount = storyboard.instantiateViewController(withIdentifier: "CreateUser")
+                self.window?.rootViewController = createAccount
                 
             }
         
